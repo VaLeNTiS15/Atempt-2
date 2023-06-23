@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/definitionFragment"
+        android:name="com.example.definition.presentation.definition.DefinitionFragment"
+        android:label="DefinitionFragment" >
+
+        <argument
+            android:name="wordString"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.definition.presentation.main.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_definitionFragment"
+            app:destination="@id/definitionFragment" />
+    </fragment>
+</navigation>
